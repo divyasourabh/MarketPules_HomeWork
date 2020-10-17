@@ -1,0 +1,9 @@
+<resources>
+    <string name="login_page">Customer Service</string>
+    <string name="list_page">All Threads</string>
+    <string name="message_page">Thread Id</string>
+    <string name="logging">Logging You In...</string>
+    <string name="fetching_message">Fetching Messages...</string>
+    <string name="Posting_message">Posting Messages...</string>
+    <string name="app_name">Branch_CS</string>
+</resources>

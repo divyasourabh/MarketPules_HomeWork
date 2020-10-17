@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/allMessagesFragment">
+
+    <fragment
+        android:id="@+id/allMessagesFragment"
+        android:name="com.ds.assignment.ui.main.view.fragment.AllMessagesFragment"
+        android:label="AllMessagesFragment" >
+        <action
+            android:id="@+id/action_allMessagesFragment_to_individualThreadFragment"
+            app:destination="@id/individualThreadFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualThreadFragment"
+        android:name="com.ds.assignment.ui.main.view.fragment.IndividualThreadFragment"
+        android:label="IndividualThreadFragment" >
+        <argument
+            android:name="thread_Id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_individualThreadFragment_pop"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/individualThreadFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
