@@ -8,7 +8,6 @@ import com.ds.assignment.R;
 import com.ds.assignment.databinding.ActivityLoginBinding;
 import com.ds.assignment.ui.base.BaseActivity;
 import com.ds.assignment.ui.main.view.fragment.LoginCSFragment;
-import com.ds.assignment.ui.main.view.fragment.LoginFragment;
 
 import dagger.hilt.android.AndroidEntryPoint;
 

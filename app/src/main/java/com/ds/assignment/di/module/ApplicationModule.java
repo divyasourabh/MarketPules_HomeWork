@@ -18,7 +18,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
-import static com.ds.assignment.data.api.RetrofitBuilder.BASE_URL;
+import static com.ds.assignment.data.api.RetrofitClient.BASE_URL;
 
 @Module
 @InstallIn(ApplicationComponent.class) //This means that the dependencies provided here will be used across the application

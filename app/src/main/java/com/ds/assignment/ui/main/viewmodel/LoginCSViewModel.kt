@@ -14,24 +14,24 @@ import com.ds.assignment.utils.LoaderState
 import com.ds.assignment.utils.NetworkHelper
 import com.ds.assignment.utils.SharedPreferencesUtils
 
-class LoginCSViewModel  @ViewModelInject constructor(private val loginRepository: LoginRepository?, private val networkHelper: NetworkHelper) : ViewModel() {
+class LoginCSViewModel  @ViewModelInject constructor(private val loginRepository: LoginRepository, private val networkHelper: NetworkHelper) : ViewModel() {
 
-    private val mAPILoaderStateLivedata: MutableLiveData<LoaderState>? = loginRepository?.apiLoaderStateLivedata
+    private val mAPILoaderStateLivedata: MutableLiveData<LoaderState>? = loginRepository.aPILoaderStateLivedata
 
     val aPILoaderStateLivedata: LiveData<LoaderState>?
         get() = mAPILoaderStateLivedata
 
-    fun login(context: Context?, loginParams: LoginParams?) {
+    fun login(context: Context?, loginParams: LoginParams) {
         if (networkHelper.isNetworkConnected()) {
-            loginRepository!!.loginAPI(context, loginParams)
+            loginRepository.loginAPI(loginParams)
         } else {
             Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
         }
     }
 
     fun updateAuthToken(context: Context?) {
-        if (loginRepository != null && loginRepository.loginModel != null) {
-            SharedPreferencesUtils.putToken(context, loginRepository.loginModel.authToken)
+        if (loginRepository.loginModel != null) {
+            SharedPreferencesUtils.putToken(context, loginRepository.loginModel?.authToken)
         }
     }
 

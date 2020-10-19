@@ -11,8 +11,6 @@ interface ApiService {
     @POST("/api/login")
     suspend fun login(@Body LoginParams : Map<String, String>): LoginModel
 
-    //    @POST("/api/login")
-    //    Single<LoginModel> login(@Body Map<String, String> loginParams);
     @GET("/api/messages")
     suspend fun getAllMessages(): List<MessageModel>
 
