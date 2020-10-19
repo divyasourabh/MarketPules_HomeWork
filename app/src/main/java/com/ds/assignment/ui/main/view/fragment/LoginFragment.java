@@ -18,6 +18,7 @@ import com.ds.assignment.R;
 import com.ds.assignment.data.model.LoginParams;
 import com.ds.assignment.databinding.FragmentLoginBinding;
 import com.ds.assignment.ui.base.BaseFragment;
+import com.ds.assignment.ui.main.viewmodel.LoginCSViewModel;
 import com.ds.assignment.ui.main.viewmodel.LoginViewModel;
 import com.ds.assignment.utils.LoaderState;
 
@@ -25,14 +26,16 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.TimeUnit;
 
+import dagger.hilt.android.AndroidEntryPoint;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
+@AndroidEntryPoint
 public class LoginFragment extends BaseFragment implements LoginContract {
 
-    private LoginViewModel mLoginViewModel;
+    LoginCSViewModel mLoginViewModel;
     FragmentLoginBinding fragmentLoginBinding;
 
     @Override
@@ -43,13 +46,13 @@ public class LoginFragment extends BaseFragment implements LoginContract {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mLoginViewModel = ViewModelProviders.of(getActivity()).get(LoginViewModel.class);
+//        mLoginViewModel = ViewModelProviders.of(getActivity()).get(LoginCSViewModel.class);
     }
 
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentLoginBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.fragment_login, container, false);
-        fragmentLoginBinding.setViewModel(mLoginViewModel);
+//        fragmentLoginBinding.setViewModel(mLoginViewModel);
         return fragmentLoginBinding.getRoot();
     }
 

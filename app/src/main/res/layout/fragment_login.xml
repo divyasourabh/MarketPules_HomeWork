@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="viewModel"
-            type="com.ds.assignment.ui.main.viewmodel.LoginViewModel"/>
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="com.ds.assignment.ui.main.viewmodel.LoginViewModel"/>-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

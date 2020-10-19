@@ -22,6 +22,9 @@ import com.ds.assignment.ui.main.adapter.ThreadClickListener;
 import com.ds.assignment.ui.main.viewmodel.CustomerServiceViewModel;
 import com.ds.assignment.utils.LoaderState;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+//@AndroidEntryPoint
 public class AllMessagesFragment extends BaseFragment {
 
     private Context mContext;

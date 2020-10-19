@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 
 import com.ds.assignment.utils.Utils;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
 public class BaseFragment extends Fragment {
 
     protected Context mContext;
@@ -18,6 +20,7 @@ public class BaseFragment extends Fragment {
             loadingDialog = Utils.getLoadingDialog(mContext, mContext.getString(stringId));
             loadingDialog.show();
         } catch (Exception e) {
+            //Silent catch
         }
     }
 
@@ -27,6 +30,7 @@ public class BaseFragment extends Fragment {
                 loadingDialog.dismiss();
             }
         } catch (Exception e) {
+            //Silent catch
         }
     }
 }

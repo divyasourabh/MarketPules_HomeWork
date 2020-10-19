@@ -14,8 +14,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 
-class CustomerService {
+class CustomerService @Inject constructor(private val apiService :ApiService) {
 
     lateinit var messageList : List<MessageModel>
 

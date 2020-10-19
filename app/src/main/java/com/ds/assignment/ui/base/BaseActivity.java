@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+//@AndroidEntryPoint
 public class BaseActivity extends AppCompatActivity {
 
     public void attachFragment(Fragment fragment, int containerId, String addToBackStack) {

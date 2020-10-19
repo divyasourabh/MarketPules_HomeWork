@@ -24,6 +24,9 @@ import com.ds.assignment.utils.LoaderState;
 
 import java.util.List;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+//@AndroidEntryPoint
 public class IndividualThreadFragment extends BaseFragment {
 
     public static final String ARG_THREAD_ID_PARAM = "thread_Id";

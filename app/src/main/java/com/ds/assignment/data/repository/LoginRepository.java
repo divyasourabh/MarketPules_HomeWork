@@ -14,6 +14,8 @@ import com.ds.assignment.utils.LoaderState;
 
 import java.util.HashMap;
 
+import javax.inject.Inject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,6 +29,7 @@ public class LoginRepository {
         return loginModel;
     }
 
+    @Inject
     public LoginRepository() {
         this.mAPILoaderStateLivedata = new MutableLiveData<>();
     }

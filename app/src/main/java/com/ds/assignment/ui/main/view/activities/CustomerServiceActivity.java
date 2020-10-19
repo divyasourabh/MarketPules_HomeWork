@@ -13,9 +13,13 @@ import com.ds.assignment.ui.base.BaseActivity;
 import com.ds.assignment.ui.main.view.fragment.AllMessagesFragmentDirections;
 import com.ds.assignment.ui.main.viewmodel.CustomerServiceViewModel;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+//@AndroidEntryPoint
 public class CustomerServiceActivity extends BaseActivity {
 
     private CustomerServiceViewModel mCustomerServiceViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

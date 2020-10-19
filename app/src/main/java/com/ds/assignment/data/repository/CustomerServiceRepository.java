@@ -10,10 +10,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import javax.inject.Inject;
+
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 
 public class CustomerServiceRepository {
+
+//    @Inject
+//    private RetrofitAPIService retrofitAPIService;
 
     public Single<List<MessageModel>> getMessages (Context context) {
         RetrofitAPIService retrofitAPIService = RetrofitClient.getRetrofitInstance(context).create(RetrofitAPIService.class);

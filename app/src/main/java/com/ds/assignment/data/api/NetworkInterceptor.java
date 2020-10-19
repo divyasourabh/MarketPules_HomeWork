@@ -25,7 +25,6 @@ public class NetworkInterceptor implements Interceptor {
 
         String token = SharedPreferencesUtils.getToken(mContext);
         if (TextUtils.isEmpty(token)) {
-//            SecUtils.logCrashlytics("Empty Token " + request.url().toString());
             Log.d("Test1234","Empty Token");
         } else {
             Log.d("Test1234","Token = " + token);
